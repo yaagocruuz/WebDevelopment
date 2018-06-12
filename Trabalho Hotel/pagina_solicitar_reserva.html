@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Hotel Luar do Sertão</title>
+		<link rel="stylesheet" href="css/style_hotel.css">
+	</head>
+	<body>
+		<!--Código padrão para todas as páginas	-->
+		<!-- CABEÇALHO -->
+		<header>
+			<h2 class="titulo">Bem vindo ao Hotel Luar do Sertão</h2>
+				<ul>
+					<li><a class="branco" href="pagina_principal_hotel.html">Principal</a></li>
+					<li><a class="branco" href="pagina_sobre_hotel.html">Hotel</a></li>
+					<li><a class="branco" href="pagina_quartos.html">Quartos</a></li>
+					<li><a class="branco" href="pagina_solicitar_reserva.html">Solicitar Reserva</a></li>
+				</ul>		
+		</header>
+			<!-- FIM CABEÇALHO -->
+
+		<h2 class="centralizar">Formulário de solicitação</h2>
+		
+		<section id="descricao_principal">
+		<form action="mailto:nathangay@gmail.com" method="post">
+		<table>
+		<tr>
+			<td>
+				<label for="nome">Nome do responsável pelo quarto:</label>
+			</td>
+			<td>
+				<input name="nome" type="text"></input>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label for="email">Email do responsável pelo quarto:</label>
+			</td>
+			<td>
+				<input name="email" type="text"></input>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label for="telefone">Telefone do responsável pelo quarto:</label>
+			</td>
+			<td>
+				<input name="telefone" type="text"></input>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label for="RG">RG do responsável pelo quarto:</label>
+			</td>
+			<td>
+				<input name="RG" type="text"></input>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label for="idade">Idade do responsável pelo quarto:</label>
+			</td>
+			<td>
+				<input type="radio" name="idade" value="Menor de 18 anos." checked>Menor de 18 anos.	
+				<input type="radio" name="idade" value="Maior de 18 anos."        >Maior de 18 anos.
+			</td>
+		</tr>
+
+		<tr>
+			<td>
+				<label for="quarto">Escolha o tipo de quarto:</label>
+			</td>
+			<td>
+				<select name="quarto">
+					<option>Quarto Simples Solteiro</option>
+					<option>Quarto Simples Casal</option>
+					<option>Quarto Luxo Casal</option>
+					<option>Quarto Família</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label for="qtd_pessoas">Quantidade de pessoas no quarto:</label>
+			</td>
+			<td>
+				<select name="qtd_pessoas">
+					<option> 1 </option>
+					<option> 2 </option>
+					<option> 3 </option>
+					<option> 4 </option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label for="pagamento">Forma de pagamento:</label>
+			</td>
+			<td>
+				<select name="pagamento">
+					<option> Cartão de Crédito </option>
+					<option> Cartão de Débito </option>
+					<option> Dinheiro </option>
+					<option> Cheque </option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label name="obs">Observações a mais:</label>
+			</td>
+			<td>
+				<textarea name="obs"></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+				<input type="Submit" name="Enviar Email">
+			</td>
+		</tr>
+		</table>
+		</form>
+		</section>
+		<br>
+		
+
+		<!-- RODAPÉ PADRÃO -->
+		<footer id="footer_principal"> Site criado por Yago Cruz para a disciplina de Desenvolvimento de Softwares para Web da UFC.</footer>
+		<!-- FIM RODAPÉ -->
+	</body>
+</html>

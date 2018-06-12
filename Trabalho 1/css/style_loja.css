@@ -1,0 +1,116 @@
+	.centralizar{
+		text-align: center;
+	}
+	
+	body {
+		font-size:     12px;
+		margin-left:   20px;
+		margin-right:  20px;
+		margin-bottom: 20px;
+		margin-top:     5px;
+		text-indent:   50px;
+	}
+
+	.img_direita{
+		float: right;
+		width: 30%;
+		text-align: center;
+		font-style: italic;
+		font-size: smaller;
+		text-indent: 0;
+		border: thin silver solid;
+		margin: 0.5em;
+		padding: 0.5em;
+	}
+
+	.texto_esquerda{
+		float: right;
+	}
+
+	section.body{
+		background-color: grey;
+	}
+
+	#formulario{
+		line-height: 25px;
+		font-size:   20px;
+	}
+
+	#footer_principal{
+		height: 50px;
+		text-align: center;
+		font-size: 12px;
+		background-color: darkblue;
+	}
+
+	p.rp_meio{
+		height: 50px;
+	}
+
+	div.centro {
+		text-align: center; 
+		position: fixed;
+		left: 0%;
+	}
+
+	div.menor{
+		font-size: 25px;
+	}
+	
+	div.formulario{
+		line-height: 25px;
+		font-size: 25px;
+	}
+	
+	p.bg-color{
+		background-color:white;
+	}
+	
+	.titulo{
+		text-align: center;
+		color: black;
+	}
+
+	a.branco{
+		color:white;
+	}
+	
+	header{
+		background-color: grey;
+		background-image: url("technow_logo.png");
+		background-size: 1200px 300px;
+		border-radius: 7px;
+		height: 300px;
+		color: white;
+		font-size: 30px;
+
+	}
+
+	#main{
+		margin-top: 100px;
+		background-color: grey;
+	}
+
+	nav{
+		margin-top: 213px;
+	}
+
+	nav ul {
+		border-radius: 7px;
+		padding:0px;
+		margin:0px;
+		background-color:#98FB98;
+		list-style:none;
+	}
+
+	.painel li {
+	    display: inline-block;
+	    vertical-align: top;
+	    width: 190px;
+	    margin: 5px;
+	    padding-bottom: 10px;
+	}
+
+	.novidades {
+   		float: center;
+ 	}

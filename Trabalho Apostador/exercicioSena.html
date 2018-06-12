@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Apostador</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+    <header class="hd">
+        <h1>Apostador Online</h1>
+    </header>
+    <div class="row">
+        <div class="col-md-4">
+            <h1>Sena</h1>
+				<label>Quantidade de jogos:</label> <input type="number" name="qtd_jogos" id="qtd_jogos" min="1"> <br><br>
+				<label>Quantidade de numeros:</label> <input type="number" name="qtd_numeros" id="qtd_numeros" min="6" max="15"> <br><br>
+				<button id="apostar" onclick="gerarAposta(0)">Cadastrar</button> <br><br>
+				
+				<div id="resultado_direita"></div>
+        </div>
+        
+        <div class="col-md-4">
+        <h1>Loto Fácil</h1>
+            <label>Quantidade de jogos:</label> <input type="number" name="z" id="qtd_jogos" min="1"> <br><br>
+			<label>Quantidade de numeros:</label> <input type="number" name="qtd_numeros" id="qtd_numeros" min="15" max="18"> <br><br>
+			<button id="apostar" onclick="gerarAposta(1)">Cadastrar</button> <br><br>
+			<div id="resultado_direita"></div>
+        </div>
+        
+        <div class="col-md-4">
+        <h1>Quina</h1>
+           	<label>Quantidade de jogos:</label> <input type="number" name="qtd_jogos" id="qtd_jogos" min="1"> <br><br>
+			<label>Quantidade de numeros:</label> <input type="number" name="qtd_numeros" id="qtd_numeros" min="5" max="15"> <br><br>
+			<button id="apostar" onclick="gerarAposta(2)">Cadastrar</button> <br><br>
+        </div>
+    </div>
+
+    <div class="row">
+    	<div class="col-md-12" id="results">
+    	<h2>Results:</h2>
+    	</div>
+    </div>
+
+    <footer class="ft">
+    	<p>Site criado por Yago Cruz. UFC - QUIXADÁ, 03.04.18</p>
+    </footer>
+</div>
+
+<script type="text/javascript">
+	function gerarAposta(tipo_jogo){
+
+		var qtd_jogos = document.querySelector('[id=qtd_jogos]').value;
+		var qtd_numeros = document.querySelector('[id=qtd_numeros]').value;
+		var jogo_final = new Array();
+
+		if (tipo_jogo == 0){
+			for (var i = 0; i < qtd_jogos; i++) {
+				var jogo = new Array();
+				for(var j = 0; j < qtd_numeros; j++) {
+					var num = Math.floor(Math.random() * 61 + 0);
+					if (!contains(num, jogo)) jogo.push(num);
+                	else j--;
+				}
+				jogo_final.push(jogo);
+			}
+			mostrar_resultado(jogo_final, qtd_jogos);
+		}
+
+		else if (tipo_jogo == 1){
+			for (var i = 0; i < qtd_jogos; i++) {
+				var jogo = new Array();
+				for(var j = 0; j < qtd_numeros; j++) {
+					var num = Math.floor(Math.random() * 25 + 0);
+					if (!contains(num, jogo)) jogo.push(num);
+                	else j--;
+            	}
+				jogo_final.push(jogo);
+			}
+			mostrar_resultado(jogo_final, qtd_jogos);
+		}
+
+		else if (tipo_jogo == 2){
+			for (var i = 0; i < qtd_jogos; i++) {
+				var jogo = new Array();
+				
+				for(var j = 0; j < qtd_numeros; j++) {
+					var num = Math.floor(Math.random() * 80 + 0);
+					if (!contains(num, jogo)) {
+						jogo.push(num);
+					}
+                	else j--;
+				}
+				jogo_final.push(jogo);
+			}
+			mostrar_resultado(jogo_final, qtd_jogos);
+		}
+
+	}
+
+	function contains(num, array) {
+	    for (var i = 0; i < array.length; i++) {
+	        if (parseInt(array[i]) == parseInt(num)) 
+	        	return true;
+	    }
+		return false;
+	}
+
+	function mostrar_resultado(jogo, qtd_jogos, tipo_jogo){
+		var aux = document.getElementById("results");
+		console.log("jj");
+
+		for (var i = 0; i < qtd_jogos; i++) {
+			var pnode = document.createElement("p");
+			var textNode = document.createTextNode("Jogo " + parseInt(i+1) + " - " + jogo[i].join(" "));
+			
+			pnode.appendChild(textNode);
+			aux.appendChild(pnode);
+		}
+	}
+
+</script>
+
+</body>
+</html>

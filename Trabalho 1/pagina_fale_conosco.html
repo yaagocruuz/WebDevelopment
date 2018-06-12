@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>TechNow!</title>
+		<link rel="stylesheet" href="css/style_loja.css">
+
+   	    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	  	<link rel="stylesheet" href="/resources/demos/style.css">
+	  	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	  	<script>
+	  		$( function() {
+	    		$( "#datepicker" ).datepicker();
+	  		});
+	  	</script>
+	</head>
+	<body>
+		<!--Código padrão para todas as páginas	-->
+		<!-- CABEÇALHO -->
+		<header>
+			<h2 class="titulo">Bem vindo ao Tech Now!</h2>
+				<ul>
+					<li><a class="branco" href="pagina_principal_loja.html">Página Inicial</a></li>
+					<li><a class="branco" href="pagina_sobre_loja.html">Sobre nós</a></li>
+					<li><a class="branco" href="pagina_produtos.html">Produtos</a></li>
+					<li><a class="branco" href="pagina_fale_conosco.html">Fale Conosco</a></li>
+				</ul>		
+		</header>
+		<!-- FIM CABEÇALHO -->
+
+		<section class="body">
+		<div class="container">
+        <form id="contact" action="" method="post">
+            <h3>Entre em contato</h3>
+            <fieldset>
+                <input placeholder="Nome" type="text" tabindex="1" required autofocus>
+            </fieldset>
+            <fieldset>
+            	<input placeholder="Data de Nascimento" type="text" id="datepicker">
+            </fieldset>
+            <fieldset>
+                <input placeholder="Email" type="email" tabindex="2" required>
+            </fieldset>
+            <fieldset>
+                <input name="phone" placeholder="Telefone" type="tel" tabindex="3" required>
+            </fieldset>
+            <fieldset>
+                <textarea placeholder="Mensagem" tabindex="4" required></textarea>
+            </fieldset>
+            <fieldset>
+            <div class="widget">
+            	<button>Enviar</button>
+            </div>
+            </fieldset>
+        </form>
+    	</div>
+		</section>
+		
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+		<script src="js/scriptmascara.js"></script>
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+		<!-- RODAPÉ PADRÃO -->
+		<footer id="footer_principal"> 
+		Telefone: (00) 0000-0000 <br>
+		Data de Fundação: 18/10/2014<br>
+		Site criado por Yago Cruz para a disciplina de Desenvolvimento de Softwares para Web da UFC.
+		</footer>
+		<!-- FIM RODAPÉ -->
+
+	</body>
+</html>
